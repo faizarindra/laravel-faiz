@@ -36,3 +36,7 @@ Route::get('/user/{id?}', function($id){
 //route with required parameter and controller laravel 8
 Route::get('/user/{id}', [UserController::class, 'show']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
